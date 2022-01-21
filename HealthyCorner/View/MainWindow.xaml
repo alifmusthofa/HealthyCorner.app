@@ -1,0 +1,116 @@
+﻿<Window x:Class="HealthyCorner.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HealthyCorner.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="766" Width="1366" 
+        WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Window.Resources>
+        <Style x:Key="labelhijau" TargetType="{x:Type Label}">
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Background="#48D7B8" >
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="0" x:Name="Home" Style="{DynamicResource MenuDockPanel}" MouseDown="Home_MouseDown">
+                <Image Height="35" VerticalAlignment="Center" Width="35" Source="icon/homepage white.png"/>
+            </DockPanel>
+
+
+            <DockPanel Grid.Row="2" x:Name="Pemeriksaan" Style="{DynamicResource MenuDockPanel}" MouseDown="Pemeriksaan_MouseDown">
+                <Image Height="35" VerticalAlignment="Center" Width="35" Source="icon/health white.png"/>
+            </DockPanel>
+
+
+            <DockPanel Grid.Row="3"  x:Name="Record" Style="{DynamicResource MenuDockPanel}" MouseDown="Record_MouseDown">
+                <Image Height="45" VerticalAlignment="Center" Width="35" Source="icon/record klinis.png" />
+            </DockPanel>
+
+            <DockPanel Grid.Row="4" x:Name="Agenda" Style="{DynamicResource MenuDockPanel}" MouseDown="Agenda_MouseDown">
+                <Image Height="35" VerticalAlignment="Center" Width="35" Source="icon/agenda white.png"/>
+            </DockPanel>
+
+            <DockPanel Grid.Row="5" x:Name="Kalkulator" Style="{DynamicResource MenuDockPanel}" MouseDown="Kalkulator_MouseDown">
+                <Image Height="35" VerticalAlignment="Center" Width="35" Source="icon/diagram white.png"/>
+            </DockPanel>
+
+            
+
+            <DockPanel Grid.Row="8" x:Name="Logout" Margin="0,-10,0,0" Style="{DynamicResource MenuDockPanel}" MouseDown="Logout_MouseDown">
+                <Image Height="35" VerticalAlignment="Center" Width="35" Source="icon/log out white.png"/>
+            </DockPanel>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <Label x:Name="lbljudul" Content="MENU" FontSize="24" FontWeight="Bold"
+                   FontFamily="mulish extrabold"
+                   Margin="20,7,0,0" VerticalAlignment="Center"/>
+                    <Label x:Name="lblTanggalHariIni" Content="Desember 23 2021" FontSize="16" FontWeight="Normal" 
+                   FontFamily="mulish"
+                   Margin="20,-9,0,0" VerticalAlignment="Center"/>
+                </StackPanel>
+                <DockPanel x:Name="dataUser" Grid.Column="1" HorizontalAlignment="Right" 
+                       VerticalAlignment="Center" Margin="0,0,30,0" MouseDown="dataUser_MouseDown">
+                    <Label Content="?????????" FontWeight="Bold" x:Name="lblUser"
+                           FontFamily="mulish extrabold" FontSize="18"/>
+                    <Image Source="icon/profile.png" Height="30" Width="30" />
+                </DockPanel>
+
+            </Grid>
+            <Frame Grid.Row="1" x:Name="frmMain" NavigationUIVisibility="Hidden" 
+                   Margin="20,10,30,20"/>
+            <Border Grid.Row="1" x:Name="MenuPengguna" BorderThickness="2" BorderBrush="#FF183A33" Height="70" VerticalAlignment="Top" Margin="0,0,30,0" Visibility="Hidden" Background="#FFBDECE2" HorizontalAlignment="Right">
+                <StackPanel   HorizontalAlignment="Right">
+                    <Label Content="        Akun pengguna" Height="35" BorderBrush="Black" x:Name="lblAkunPengguna"
+                       FontWeight="Bold" Style="{DynamicResource labelhijau}"
+                           FontFamily="mulish extrabold" FontSize="18" Background="{x:Null}" HorizontalAlignment="Right" MouseDown="lblAkunPengguna_MouseDown"/>
+                    <Label x:Name="lblLogout" Content="    log out" Height="35" BorderBrush="Black"
+                       FontWeight="Bold"  Style="{DynamicResource labelhijau}"
+                           FontFamily="mulish extrabold" FontSize="18" HorizontalAlignment="Right" Background="{x:Null}" MouseDown="lblLogout_MouseDown" />
+                </StackPanel>
+            </Border>
+
+            
+
+
+
+
+
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,178 @@
+﻿<Page x:Class="HealthyCorner.View.RiwayatKlinisViewAwal"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HealthyCorner.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="420" d:DesignWidth="1246" Background="white"
+      Title="RiwayatKlinisViewAwal">
+    <Page.Resources>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <ImageBrush x:Key="Button.MouseOver.Background" ImageSource="icon/deleteKlik.png"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF43C7BB" Opacity="0.3"/>
+        <Style x:Key="BtnRoundd1" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="8" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" Margin="0,0,0,0">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <ImageBrush x:Key="Button.MouseOver.Background2" ImageSource="icon/Viewklik.png"/>
+
+        <Style x:Key="BtnRoundd2" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="8" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" Margin="0,0,0,0">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background2}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="480"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Background="Azure">
+                <StackPanel Grid.Column="0">
+
+                    <Label Content="Penyakit" FontSize="16" 
+                       FontFamily="mulish semibold" 
+                       Margin="30,10,0,0"/>
+                    <TextBox x:Name="txtpenyakit" Margin="30,0,40,0" Height="30" MaxLength="50" FontSize="17" Foreground="#5E5E5E"/>
+                    <Label Content="Tanggal" FontSize="16" 
+                       FontFamily="mulish semibold" 
+                       Margin="30,10,0,0"/>
+                    <DatePicker x:Name="dtptanggal" FontSize="17" Height="30"   Foreground="#5E5E5E"
+                       FontFamily="mulish semibold" 
+                       Margin="30,0,40,0"/>
+                    <Label Content="Keterangan Klinis" FontSize="16" 
+                       FontFamily="mulish semibold" 
+                       Margin="30,10,0,0"/>
+                    <TextBox x:Name="txtketeranganKlinis" Margin="30,0,40,0" FontSize="17" Foreground="#5E5E5E"
+                               Height="100" Background="white" TextWrapping="Wrap" MaxLength="2000" MaxLines="200" />
+
+
+
+                    <Button x:Name="btnsimpan" Content="Simpan" Foreground="White" 
+                            FontSize="24" FontFamily="mulish semibold" 
+                            Background="#48D7B8" Height="40" Width="250" Margin="15,15,15,0" Click="btnsimpan_Click"/>
+
+                </StackPanel>
+
+            </Grid>
+            <Grid Margin="30,10,0,0" Grid.Column="1" Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Riwayat Klinis" FontSize="18" 
+                       FontFamily="mulish semibold" />
+                <DataGrid Grid.Row="1"
+
+		x:Name="dgriwayatklinis" Margin="0,10,10,30" Style="{DynamicResource DataGridStyle}"
+        BorderBrush="#FFAF7268" 
+        
+
+        
+        AutoGenerateColumns="False"
+        Background="White"
+        CanUserAddRows="False"
+        CanUserResizeColumns="True"
+        ColumnHeaderHeight="40"
+        DataContext="{Binding}"
+        
+        FontSize="12"
+        ItemsSource="{Binding}"
+            
+        RowBackground="White" 
+                    VerticalGridLinesBrush="#FF3D9B2E" HorizontalGridLinesBrush="#FF2945A4" 
+                    GridLinesVisibility="Horizontal" CanUserSortColumns="False" 
+                    VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="visible"
+                    >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn
+                Width="auto"
+                Binding="{Binding ID}"
+                Header="ID"
+                IsReadOnly="True"
+                Visibility="Visible" CanUserResize="False" />
+                        <DataGridTextColumn
+                Width="auto"
+                Binding="{Binding Tanggal}"
+                Header="Tanggal"
+                IsReadOnly="True"
+                Visibility="Visible" CanUserResize="False" />
+                        <DataGridTextColumn
+                Width="auto"
+                Binding="{Binding Penyakit}"
+                Header="Penyakit"
+                IsReadOnly="True"
+                Visibility="Visible" CanUserResize="False" />
+
+                        <DataGridTextColumn
+                Width="auto"
+                Binding="{Binding KeteranganKlinis}"
+                Header="Keterangan"
+                IsReadOnly="True"
+                Visibility="Visible" />
+                        <DataGridTemplateColumn CanUserResize="False">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button x:Name="imgview" Width="20" Height="20" BorderBrush="{x:Null}" Style="{DynamicResource BtnRoundd2}" Click="imgview_Click" >
+                                        <Button.Background>
+                                            <ImageBrush ImageSource ="icon/icon view.png" TileMode="Tile"  ></ImageBrush>
+                                        </Button.Background>
+                                    </Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn CanUserResize="False">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button x:Name="imgdelete" Width="20" Height="20" BorderBrush="{x:Null}" Style="{DynamicResource BtnRoundd1}" Click="imgdelete_Click">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource ="icon/delete.png" TileMode="Tile"  ></ImageBrush>
+                                        </Button.Background>
+                                    </Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Page>

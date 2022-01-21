@@ -1,0 +1,20 @@
+﻿<Page x:Class="HealthyCorner.View.Kalkulatorkalorihasil"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HealthyCorner.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="442" d:DesignWidth="760" Background="white"
+      Title="Kalkulatorkalorihasil">
+
+    <Grid>
+        <StackPanel>
+            <Image Source="ilustrasi/piring makan.png" Height="250" Width="250" Margin="30,30,0,0"/>
+            <Label Content="Hasil Perhitungan Kalori" FontSize="18" 
+                       FontFamily="mulish bold" Margin="30,30,0,0"/>
+            <Label x:Name="lblkalorihasil" Content="Kalori yang dibutuhkan tubuh anda adalah 2000 kalori dengan Berat Badan Ideal untuk Anda adalah 64 kg" Margin="30,10,30,0" FontSize="14" FontFamily="mulish semibold"/>
+
+        </StackPanel>
+    </Grid>
+</Page>

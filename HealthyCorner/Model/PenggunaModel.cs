@@ -13,8 +13,12 @@ namespace HealthyCorner.Model
         public string id;
         public string nama;
         public string jk;
-        public string telp;
         public string password;
+
+
+        // chace
+        public static string namaUser;
+        public static string idUser;
 
         // deklarasi object model template\
         private ModelTemplate temp;
@@ -35,6 +39,8 @@ namespace HealthyCorner.Model
             if (ds.Tables[0].Rows.Count > 0)
             {
                 result = true;
+                idUser = ds.Tables[0].Rows[0][0].ToString();
+                namaUser = ds.Tables[0].Rows[0][1].ToString();
             }
             else
             {
@@ -43,10 +49,26 @@ namespace HealthyCorner.Model
             return result;
         }
 
+        
+        public DataSet InfoAkun()
+        {
+            DataSet ds = new DataSet();
+            ds = temp.SelectData("SELECT * FROM pengguna where id = '"+idUser+"'", "pengguna");
+            return ds;
+        }
+        
+
         public bool InsertPengguna()
         {
-            string data = "'" + id + "','" + nama + "','" + jk + "','" + telp + "','" + password + "'";
+            string data = "'" + id + "','" + nama + "','"  + jk + "','" + password + "'";
             return temp.Insert("pengguna", data);
+        }
+        public bool UpdatePengguna()
+        {
+            string tabel = "pengguna";
+            string data = "nama = '" + nama + "',gender = '" + jk + "',password = '" + password + "' ";
+            string kondisi = "id='" + idUser + "'";
+            return temp.Update(tabel, data, kondisi);
         }
     }
 }

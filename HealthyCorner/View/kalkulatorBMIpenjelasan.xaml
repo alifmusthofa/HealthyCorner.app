@@ -1,0 +1,17 @@
+﻿<Page x:Class="HealthyCorner.View.kalkulatorBMIpenjelasan"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HealthyCorner.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="442" d:DesignWidth="760" Background="white"
+      Title="kalkulatorBMIpenjelasan">
+
+    <Grid>
+        <StackPanel Margin="30,30,30,30">
+            <TextBlock Text="Apa itu BMI (IMT)?&#x0a;&#x0a;Body Mass Index (BMI) atau yang sering dikenal dengan Indeks Massa Tubuh (IMT) adalah nilai ukur untuk mengetahui status gizi seseorang berdasarkan berat dan tinggi badannya. Nilai BMI (IMT) juga dapat menjadi alat skrining awal untuk mengetahui risiko seseorang terhadap suatu penyakit.&#x0a;Nilai BMI (IMT) yang tinggi menandakan bahwa Anda kelebihan berat badan (overweight atau obesitas). Sementara, nilai BMI (IMT) yang rendah artinya Anda kekurangan gizi dan memiliki berat badan rendah. Namun IMT tidak bisa membedakan persen lemak tubuh dan persen massa otot. Sementara, persen lemak tubuh lebih bisa memberikan gambaran terkait risiko penyakit kronis.&#x0a;&#x0a;Mengapa saya harus mengukur Indeks Massa Tubuh (IMT)?&#x0a;&#x0a;Mengetahui IMT membantu Anda untuk menjaga rasio lemak tubuh yang terkait dengan tinggi badan Anda. IMT juga memberi peringatan peluang risiko penyakit yang mungkin mengintai kesehatan Anda.&#x0a;IMT yang sehat umumnya mengarah pada kualitas hidup yang lebih bahagia dan lebih sehat. Sementara IMT yang tinggi terkait erat dengan risiko penyakit seperti diabetes tipe 2, penyakit jantung, dan tekanan darah tinggi. Mengetahui IMT berarti memberi pertimbangan bagi Anda dan tenaga kesehatan dalam mengambil keputusan mengenai kondisi kesehatan tubuh Anda." TextAlignment="Justify" TextWrapping="Wrap"
+                       />
+        </StackPanel>
+    </Grid>
+</Page>

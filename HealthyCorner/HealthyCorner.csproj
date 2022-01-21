@@ -55,7 +55,95 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\Agenda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\agendaAkhir.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AgendaAwal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\GantiAkun.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\IsiPiringku.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\kalkulatorBMIhasil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\kalkulatorBMIpenjelasan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KalkulatorGizi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Kalkulatorkalorihasil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\kalkulatorkaloripenjelasan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pemeriksaan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PemeriksaanRutin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PemeriksaanRutinAkhir.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PemeriksaanRutinAwal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\percobaan2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RiwayatKlinisViewakhir.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RiwayatKlinisViewAwal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RiwayatKliniz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Signup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -67,12 +155,89 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controller\agendaKontroller.cs" />
+    <Compile Include="Controller\KalkulatorBMIKontroller.cs" />
+    <Compile Include="Controller\KalkulatorKaloriKontroller.cs" />
+    <Compile Include="Controller\kliniskontroller.cs" />
+    <Compile Include="Controller\PemeriksaanKontroller.cs" />
     <Compile Include="Controller\Pengguna.cs" />
+    <Compile Include="Controller\percobaankontroller2.cs" />
+    <Compile Include="Model\agendaModel.cs" />
+    <Compile Include="Model\KalkulatorBMIModel.cs" />
+    <Compile Include="Model\KalkulatorKaloriModel.cs" />
+    <Compile Include="Model\KlinisModel.cs" />
+    <Compile Include="Model\Pemeriksaan.cs" />
     <Compile Include="Model\PenggunaModel.cs" />
+    <Compile Include="View\Agenda.xaml.cs">
+      <DependentUpon>Agenda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\agendaAkhir.xaml.cs">
+      <DependentUpon>agendaAkhir.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AgendaAwal.xaml.cs">
+      <DependentUpon>AgendaAwal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\GantiAkun.xaml.cs">
+      <DependentUpon>GantiAkun.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\IsiPiringku.xaml.cs">
+      <DependentUpon>IsiPiringku.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\kalkulatorBMIhasil.xaml.cs">
+      <DependentUpon>kalkulatorBMIhasil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\kalkulatorBMIpenjelasan.xaml.cs">
+      <DependentUpon>kalkulatorBMIpenjelasan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KalkulatorGizi.xaml.cs">
+      <DependentUpon>KalkulatorGizi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Kalkulatorkalorihasil.xaml.cs">
+      <DependentUpon>Kalkulatorkalorihasil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\kalkulatorkaloripenjelasan.xaml.cs">
+      <DependentUpon>kalkulatorkaloripenjelasan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\ModelTemplate.cs" />
+    <Compile Include="View\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pemeriksaan.xaml.cs">
+      <DependentUpon>Pemeriksaan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PemeriksaanRutin.xaml.cs">
+      <DependentUpon>PemeriksaanRutin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PemeriksaanRutinAkhir.xaml.cs">
+      <DependentUpon>PemeriksaanRutinAkhir.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PemeriksaanRutinAwal.xaml.cs">
+      <DependentUpon>PemeriksaanRutinAwal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\percobaan2.xaml.cs">
+      <DependentUpon>percobaan2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RiwayatKlinisViewakhir.xaml.cs">
+      <DependentUpon>RiwayatKlinisViewakhir.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RiwayatKlinisViewAwal.xaml.cs">
+      <DependentUpon>RiwayatKlinisViewAwal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RiwayatKliniz.xaml.cs">
+      <DependentUpon>RiwayatKliniz.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Signup.xaml.cs">
+      <DependentUpon>Signup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -117,8 +282,141 @@
     <Resource Include="View\Group 38.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\trafalgar-illustration sec03 1.png" />
+    <Resource Include="View\trafalgar-illustration sec03 1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="View\icon\agenda white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\icon\chat white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\icon\diagram white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\icon\health white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\icon\homepage white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\icon\option white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\icon\log out white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\icon\profile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\icon\sub menu search.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\icon\sub menu details.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\icon\sub menu konsultasi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\icon\sub menu obat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\icon\sub menu pertolongan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\icon\sub menu tracking.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\icon\background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\icon2\asamurat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\icon2\detakjantung.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\icon2\guladarah.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\icon2\kolesterol.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\icon2\suhubadan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\icon2\tekanandarah.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\ilustrasi\pose buah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\ilustrasi\centang.png" />
+    <Resource Include="View\ilustrasi\cewek centang.png" />
+    <Resource Include="View\ilustrasi\cewek.png" />
+    <Resource Include="View\ilustrasi\cowok centang.png" />
+    <Resource Include="View\ilustrasi\cowok.png" />
+    <Resource Include="View\ilustrasi\piring makan.png" />
+    <Resource Include="View\ilustrasi\pose alpukat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\icon jmakanan\Icon_bread.png" />
+    <Resource Include="View\icon jmakanan\Icon_eggs.png" />
+    <Resource Include="View\icon jmakanan\Icon_vegetables.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\ilustrasi\ilustrasi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\ilustrasi\BMI-1024x569.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\icon\record klinis.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\icon\icon view.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\icon\delete.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\icon\deleteKlik.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\icon\Viewklik.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\ilustrasi\agenda.png" />
+    <Resource Include="View\ilustrasi\pemeriksaan rutin.png" />
+    <Resource Include="View\ilustrasi\record klinis.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

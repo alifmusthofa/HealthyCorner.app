@@ -12,31 +12,30 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace HealthyCorner
+namespace HealthyCorner.View
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for Signup.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class Signup : Window
     {
         Controller.Pengguna pengguna;
-        public Login()
+        public Signup()
         {
             InitializeComponent();
             pengguna = new Controller.Pengguna(this);
         }
 
+        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            pengguna.Login();
-        }
-
-        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            View.Signup register = new View.Signup();
-            register.Show();
-            this.Close();
+            pengguna.Register();
         }
     }
 }

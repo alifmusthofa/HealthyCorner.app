@@ -1,0 +1,36 @@
+﻿<Page x:Class="HealthyCorner.View.Agenda"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HealthyCorner.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1246" Background="White"
+      Title="Agenda">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#48D7B8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="700"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <Label Content="Agenda" Foreground="white" 
+                       FontSize="36" FontFamily="mulish"
+                       Margin="30,30,0,10"/>
+                <TextBlock Text="Catat Agenda yang berhubungan dengan Kesehatan untuk pengingat"
+                           TextWrapping="Wrap" FontFamily="mulish" FontSize="16" 
+                           Foreground="white" Margin="30,0,250,0" />
+            </StackPanel>
+            <Image Grid.Column="1" Source="ilustrasi/agenda.png" />
+
+        </Grid>
+        <Frame Grid.Row="1" x:Name="frameagenda"/>
+        
+    </Grid>
+</Page>

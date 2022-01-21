@@ -1,0 +1,123 @@
+﻿<Page x:Class="HealthyCorner.View.IsiPiringku"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HealthyCorner.View"
+      mc:Ignorable="d" 
+      
+      Title="IsiPiringku" Width="1246" Height="600">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#48D7B8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="700"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <Label Content="Isi Piringku" Foreground="white" 
+                       FontSize="36" FontFamily="mulish"
+                       Margin="30,30,0,10"/>
+                <TextBlock Text="Gunakan kalkulator ini untuk menentukan berapa kebutuhan kalori harian Anda berdasarkan tinggi, berat badan, usia, dan aktivitas sehari-hari."
+                           TextWrapping="Wrap" FontFamily="mulish" FontSize="16" 
+                           Foreground="white" Margin="30,0,250,0" />
+            </StackPanel>
+            <Image Grid.Column="1" Source="ilustrasi/pose alpukat.png" />
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="480"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Background="Azure" Height="420" VerticalAlignment="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Content="Jenis Makanan" FontFamily="mulish semibold" FontSize="18" Margin="30,30,30,0"/>
+
+                <DockPanel Grid.Row="1">
+                    <Image Source="icon jmakanan/Icon_bread.png" Width="50" Height="50" Margin="30,0,10,0"/>
+                    <Label Content="Sumber Karbohidrat" FontFamily="mulish semibold" FontSize="18" Margin="0,10,0,0"/>
+                </DockPanel>
+                
+                <ComboBox x:Name="cbKarbo" Grid.Row="2" Height="40" Margin="30,0,0,0" FontSize="16" >
+                    <ComboBoxItem FontSize="16">Nasi</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Mie</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Kentang</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Jagung</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Roti Tawar</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Singkong</ComboBoxItem>
+                </ComboBox>
+
+                <DockPanel Grid.Row="3">
+                    <Image Source="icon jmakanan/Icon_eggs.png" Width="50" Height="50" Margin="30,0,10,0"/>
+                    <Label Content="Sumber Protein" FontFamily="mulish semibold" FontSize="18" Margin="0,10,0,0"/>
+                </DockPanel>
+
+                <ComboBox x:Name="cbProtein" Grid.Row="4" Height="40" Margin="30,0,0,0" FontSize="16" >
+                    <ComboBoxItem FontSize="16">Tahu</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Tempe</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Kacang Hijau</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Kedelai</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Kacang Tanah</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Oncom</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Daging Ayam</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Baso</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Sosis</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Daging Sapi</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Ikan Laut</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Susu Segar</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Telur Ayam</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Telur Ayam Kampung</ComboBoxItem>
+                </ComboBox>
+
+                <DockPanel Grid.Row="5">
+                    <Image Source="icon jmakanan/Icon_vegetables.png" Width="50" Height="50" Margin="30,0,10,0"/>
+                    <Label Content="Sayur dan Buah" FontFamily="mulish semibold" FontSize="18" Margin="0,10,0,0"/>
+                </DockPanel>
+
+                <ComboBox x:Name="cbSayurBuah"  Grid.Row="6" Height="40" Margin="30,0,0,0" FontSize="16" >
+                    <ComboBoxItem FontSize="16">Sawi Putih</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Terong</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Wortel</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Kol</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Mentimun</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Brokoli</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Lobak</ComboBoxItem>
+                    
+                    <ComboBoxItem FontSize="16">Mangga</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Jeruk</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Pisang</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Semangka</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Alpukat</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Melon</ComboBoxItem>
+                    <ComboBoxItem FontSize="16">Pepaya</ComboBoxItem>
+                    
+                </ComboBox>
+
+            </Grid>
+            <StackPanel Grid.Column="1" Background="white">
+                <Label Content="Isi Piringku" FontSize="18" 
+                       FontFamily="mulish bold" Margin="30,30,0,0"/>
+                <DataGrid x:Name="dgIsipiringku" Height="340" Margin="30,0,30,0"/>
+
+
+            </StackPanel>
+
+
+        </Grid>
+    </Grid>
+</Page>

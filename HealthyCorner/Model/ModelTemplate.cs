@@ -21,7 +21,7 @@ namespace HealthyCorner.Model
             conn = new SqlConnection();
             // set connection
             conn.ConnectionString = "Data Source = DESKTOP-DCA7UTL;" +
-                                    "Initial Catalog = presensi;" +
+                                    "Initial Catalog = HealthyCorner;" +
                                     "Integrated Security = True;";
             return conn;
         }
@@ -112,7 +112,7 @@ namespace HealthyCorner.Model
             result = false;
             try
             {
-                string query = "DELETE FORM " + tabel + " WHERE " + kondisi;
+                string query = "DELETE FROM " + tabel + " WHERE " + kondisi;
                 conn.Open();
                 command = new SqlCommand();
                 command.Connection = conn;
@@ -127,5 +127,29 @@ namespace HealthyCorner.Model
             conn.Close();
             return result;
         }
+
+        // template select data counting, top, grouping,dll
+        public DataSet SelectData(string query, string tabel)
+        {
+            DataSet ds = new DataSet();
+
+            try
+            {
+                conn.Open();
+                command = new SqlCommand();
+                command.Connection = conn;
+                command.CommandType = CommandType.Text;
+                command.CommandText = query;
+                SqlDataAdapter sda = new SqlDataAdapter(command);
+                sda.Fill(ds, tabel);
+            }
+            catch (SqlException)
+            {
+                ds = null;
+            }
+            conn.Close();
+            return ds;
+        }
+
     }
 }

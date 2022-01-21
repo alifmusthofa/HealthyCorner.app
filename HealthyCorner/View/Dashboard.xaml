@@ -1,0 +1,180 @@
+﻿<Window x:Class="HealthyCorner.View.Dashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:local="clr-namespace:HealthyCorner.View"
+        mc:Ignorable="d"
+        Title="Dashboard" Height="766" Width="1366" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="#48D7B8" >
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="0" x:Name="Home">
+                <Image Height="35" VerticalAlignment="Center" Width="35" Source="icon/homepage white.png"/>
+            </DockPanel>
+
+
+            <DockPanel Grid.Row="2" x:Name="Pemeriksaan">
+                <Image Height="35" VerticalAlignment="Center" Width="35" Source="icon/health white.png"/>
+            </DockPanel>
+
+
+            <DockPanel Grid.Row="3" x:Name="Agenda">
+                <Image Height="35" VerticalAlignment="Center" Width="35" Source="icon/agenda white.png"/>
+            </DockPanel>
+
+            <DockPanel Grid.Row="4" x:Name="Record">
+                <Image Height="35" VerticalAlignment="Center" Width="35" Source="icon/chat white.png"/>
+            </DockPanel>
+
+            <DockPanel Grid.Row="5" x:Name="Kalkulator">
+                <Image Height="35" VerticalAlignment="Center" Width="35" Source="icon/diagram white.png"/>
+            </DockPanel>
+
+            <DockPanel Grid.Row="6" x:Name="Info">
+                <Image Height="35" VerticalAlignment="Center" Width="35" Source="icon/option white.png"/>
+            </DockPanel>
+
+            <DockPanel Grid.Row="8" x:Name="Logout">
+                <Image Height="35" VerticalAlignment="Center" Width="35" Source="icon/log out white.png"/>
+            </DockPanel>
+        </Grid>
+        <Image Grid.Column="1" Source="icon/background.png"/>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <Label Content="MENU" FontSize="24" FontWeight="Bold"
+                   FontFamily="mulish extrabold"
+                   Margin="20,7,0,0" VerticalAlignment="Center"/>
+                <Label Content="Desember 23 2021" FontSize="16" FontWeight="Normal" 
+                   FontFamily="mulish"
+                   Margin="20,-9,0,0" VerticalAlignment="Center"/>
+            </StackPanel>
+
+
+            <DockPanel x:Name="dataUser" Grid.Column="2" HorizontalAlignment="Right" 
+                       VerticalAlignment="Center" Margin="0,0,30,0">
+                <Label Content="Muhammad Alif" FontWeight="Bold" FontFamily="mulish extrabold" FontSize="18"/>
+                <Image Source="icon/profile.png" Height="30" Width="30" />
+            </DockPanel>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="333*"/>
+                    <RowDefinition Height="309*"/>
+                    <RowDefinition Height="23*"/>
+                </Grid.RowDefinitions>
+                <Grid Background="White" Width="300" Height="300" Grid.Row="0" Margin="60,16,59,17" >
+                    <Grid.BitmapEffect>
+
+                        <DropShadowBitmapEffect Softness="1" Direction="-15"/>
+                    </Grid.BitmapEffect>
+                    <Image Source="icon/sub menu search.png" Width="90" Height="90" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,48,0,0" RenderTransformOrigin="0.617,1.225" />
+                    <Label Content="Search Doctor" FontSize="20" FontFamily="mulish extrabold" Width="150" Height="30" Margin="30,143,120,127"/>
+                    <TextBlock Text="Choose your doctor from thousands of specialist, general, and trusted hospitals"  FontSize="14" TextWrapping="Wrap" Margin="15,180,15,15"/>
+                </Grid>
+
+
+                <Grid Background="White" Width="300" Height="300" Grid.Row="1" Margin="60,16,59,16" Grid.RowSpan="2" >
+                    <Grid.BitmapEffect>
+
+                        <DropShadowBitmapEffect Softness="1" Direction="-15"/>
+                    </Grid.BitmapEffect>
+                    <Image Source="icon/sub menu details.png" Width="90" Height="90" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,48,0,0" RenderTransformOrigin="0.617,1.225" />
+                    <Label Content="Details Info" FontSize="20" FontFamily="mulish extrabold" Width="150" Height="30" Margin="30,143,120,127"/>
+                    <TextBlock Text="Free consultation with our trusted doctors and get the best recomendations"  FontSize="14" TextWrapping="Wrap" Margin="15,180,15,15"/>
+                </Grid>
+
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Background="White" Width="300" Height="300" Grid.Row="0" >
+                    <Grid.BitmapEffect>
+
+                        <DropShadowBitmapEffect Softness="1" Direction="-15"/>
+                    </Grid.BitmapEffect>
+                    <Image Source="icon/sub menu obat.png" Width="90" Height="90" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,48,0,0" RenderTransformOrigin="0.617,1.225" />
+                    <Label Content="Online Pharmacy" FontSize="20" FontFamily="mulish extrabold" Width="600" Margin="30,143,-330,107"/>
+                    <TextBlock Text="Buy  your medicines with our mobile application with a simple delivery system"  FontSize="14" TextWrapping="Wrap" Margin="15,180,15,15"/>
+                </Grid>
+
+
+                <Grid Background="White" Width="300" Height="300" Grid.Row="1" >
+                    <Grid.BitmapEffect>
+
+                        <DropShadowBitmapEffect Softness="1" Direction="-15"/>
+                    </Grid.BitmapEffect>
+                    <Image Source="icon/sub menu pertolongan.png" Width="90" Height="90" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,48,0,0" RenderTransformOrigin="0.617,1.225" />
+                    <Label Content="Emergency Care" FontSize="20" FontFamily="mulish extrabold" Width="800" Margin="30,143,-530,108"/>
+                    <TextBlock Text="You can get 24/7 urgent care for yourself or your children and your lovely family"  FontSize="14" TextWrapping="Wrap" Margin="15,180,15,15"/>
+                </Grid>
+
+
+
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Background="White" Width="300" Height="300" Grid.Column="0" >
+                    <Grid.BitmapEffect>
+
+                        <DropShadowBitmapEffect Softness="1" Direction="-15"/>
+                    </Grid.BitmapEffect>
+                    <Image Source="icon/sub menu konsultasi.png" Width="90" Height="90" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,48,0,0" RenderTransformOrigin="0.617,1.225" />
+                    <Label Content="Consultation" FontSize="20" FontFamily="mulish extrabold" Width="150" Height="30" Margin="30,143,120,127"/>
+                    <TextBlock Text="Free consultation with our trusted doctors and get the best recomendations" FontSize="14" TextWrapping="Wrap" Margin="15,180,15,15"/>
+
+                </Grid>
+
+
+                <Grid Background="White" Width="300" Height="300" Grid.Row="1" >
+                    <Grid.BitmapEffect>
+
+                        <DropShadowBitmapEffect Softness="1" Direction="-15"/>
+                    </Grid.BitmapEffect>
+                    <Image Source="icon/sub menu tracking.png" Width="90" Height="90" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,48,0,0" RenderTransformOrigin="0.617,1.225" />
+                    <Label Content="Tracking" FontSize="20" FontFamily="mulish extrabold" Width="150" Margin="30,143,120,112"/>
+                    <TextBlock Text="Track and save your medical history and health data " FontSize="14" TextWrapping="Wrap" Margin="15,180,15,15"/>
+                </Grid>
+
+
+
+            </Grid>
+        </Grid>
+
+
+    </Grid>
+
+</Window>
